@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="fxRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E2E"/>
+      <stop offset="100%" stop-color="#C50000"/>
+    </linearGradient>
+    <linearGradient id="fxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Automotive Dark Base -->
+  <rect width="100" height="100" rx="22" fill="url(#fxBg)"/>
+  <rect x="2.5" y="2.5" width="95" height="95" rx="19.5" fill="none" stroke="#E10000" stroke-width="4.5"/>
+
+  <!-- Speed slash accent line -->
+  <line x1="8" y1="92" x2="92" y2="92" stroke="#E10000" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Bold Slanted Racing "FX" Monogram -->
+  <g transform="skewX(-11) translate(4, 0)">
+    <!-- Letter F in solid white -->
+    <path d="M 20 22 H 46 V 34 H 32 V 44 H 42 V 55 H 32 V 78 H 20 Z" fill="#FFFFFF"/>
+    
+    <!-- Letter X in executive racing red -->
+    <path d="M 45 22 H 58 L 67 47 L 76 22 H 89 L 74 50 L 89 78 H 76 L 67 53 L 58 78 H 45 L 60 50 Z" fill="url(#fxRed)"/>
+  </g>
+</svg>
