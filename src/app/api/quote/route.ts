@@ -31,12 +31,21 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!vehicleYear || !vehicleMake || !vehicleModel) {
+    const rawVehicle = (
+      body.vehicle ||
+      `${vehicleYear || ""} ${vehicleMake || ""} ${vehicleModel || ""}`
+    ).trim();
+
+    if (!rawVehicle) {
       return NextResponse.json(
-        { error: "Vehicle year, make, and model are required." },
+        { error: "Please enter your vehicle (e.g. 2024 Honda Civic)." },
         { status: 400 }
       );
     }
+
+    const vYear = vehicleYear || "Specified";
+    const vMake = vehicleMake || rawVehicle;
+    const vModel = vehicleModel || "";
 
     // Generate reference ID for tracking
     const quoteId = `FX-${Date.now().toString(36).toUpperCase()}`;
@@ -47,7 +56,7 @@ export async function POST(request: Request) {
     console.log(`[NEW QUOTE INQUIRY RECEIVED] ID: ${quoteId}`);
     console.log(`Timestamp: ${timestamp}`);
     console.log(`Customer: ${fullName.trim()} | Phone: ${phone.trim()} | Email: ${email || "Not provided"}`);
-    console.log(`Vehicle: ${vehicleYear} ${vehicleMake} ${vehicleModel}`);
+    console.log(`Vehicle: ${vYear} ${vMake} ${vModel}`);
     console.log(`Service: ${service} (Starts at $${startingPrice})`);
     if (preferredDate) console.log(`Preferred Date: ${preferredDate}`);
     if (notes) console.log(`Customer Notes: ${notes}`);

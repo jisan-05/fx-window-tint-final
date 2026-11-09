@@ -8,19 +8,19 @@ import { assetRegistry } from "@/data/assets";
 export function Hero() {
   return (
     <section id="hero" className="relative min-h-[90vh] xl:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#050B16]">
-      {/* Background Cinematic Vehicle Image with Dark Gradient Overlays */}
+      {/* Background Cinematic Vehicle Image with Reduced Overlay for Maximum Vehicle Visibility */}
       <div className="absolute inset-0 z-0">
         <Image
           src={assetRegistry.heroVehicle.currentPath}
           alt={assetRegistry.heroVehicle.alt}
           fill
           priority
-          className="object-cover object-center scale-105"
+          className="object-cover object-center scale-105 opacity-90"
           sizes="100vw"
         />
-        {/* Layered dark automotive overlays matching xmhouston video hero */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050B16] via-[#050B16]/85 to-[#050B16]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-[#050B16]/70" />
+        {/* Soft, targeted gradient: dark on left for text legibility, clear on right so the vehicle shines */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050B16]/90 via-[#050B16]/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-24 lg:py-32 xl:py-36 w-full">

@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileFloatingCTA } from "@/components/layout/MobileFloatingCTA";
 
 import { LocationContact } from "@/components/sections/LocationContact";
+import { BookingInquiry } from "@/components/sections/BookingInquiry";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { MapPin, Phone, Clock, ArrowRight, Navigation } from "lucide-react";
@@ -43,11 +44,11 @@ export default function ContactPage() {
               alt="FX Window Tint shop and installation bay facility"
               fill
               priority
-              className="object-cover object-center opacity-30"
+              className="object-cover object-center opacity-65"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#050B16] via-[#050B16]/90 to-[#050B16]/60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050B16] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050B16]/90 via-[#050B16]/60 to-[#050B16]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050B16]/80 via-transparent to-transparent" />
           </div>
           <div className="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
             <div className="max-w-4xl">
@@ -90,6 +91,9 @@ export default function ContactPage() {
 
         {/* Location & Map Section */}
         <LocationContact />
+
+        {/* Quick Booking & Estimate Inquiry Form */}
+        <BookingInquiry />
 
         {/* FAQs Section */}
         <FAQ />

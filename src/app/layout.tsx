@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   authors: [{ name: businessInfo.name }],
   icons: {
     icon: [
-      { url: "/icon.svg?v=fx2", type: "image/svg+xml" },
-      { url: "/favicon.ico?v=fx2" },
+      { url: "/icon.svg?v=fx4", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=fx4" },
     ],
-    apple: [{ url: "/apple-icon.png?v=fx2" }],
+    apple: [{ url: "/apple-icon.png?v=fx4" }],
   },
   robots: {
     index: true,

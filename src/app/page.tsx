@@ -11,6 +11,7 @@ import { ShadeSelector } from "@/components/sections/ShadeSelector";
 import { FeaturedServices } from "@/components/sections/FeaturedServices";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Reviews } from "@/components/sections/Reviews";
+import { BookingInquiry } from "@/components/sections/BookingInquiry";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function HomePage() {
@@ -44,11 +45,14 @@ export default function HomePage() {
         {/* 9. Verified Customer Reviews (Max 3 Reviews + Link to 285 Google Reviews) */}
         <Reviews />
 
-        {/* 10. High-Impact Closing CTA Banner */}
+        {/* 10. Quick Online Booking & Inquiry Form (End of Website Conversion Engine) */}
+        <BookingInquiry />
+
+        {/* 11. High-Impact Closing CTA Banner */}
         <FinalCTA />
       </main>
 
-      {/* 11. Executive Dark Footer */}
+      {/* 12. Executive Dark Footer */}
       <Footer />
 
       {/* 12. Mobile Floating Quick Call & Quote Action Bar */}

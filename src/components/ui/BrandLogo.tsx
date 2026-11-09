@@ -21,9 +21,9 @@ export function BrandLogo({
 
   return (
     <div className={`flex items-center gap-3.5 group shrink-0 ${className}`}>
-      {/* Bold Automotive FX Racing Badge Icon */}
+      {/* Automotive Dark Badge without Red Border */}
       <div
-        className={`${iconDimensions} relative rounded-xl bg-gradient-to-br from-[#050B16] via-[#0B1320] to-[#1E293B] border-2 border-[#E10000] p-1.5 flex items-center justify-center transition-all duration-300 shadow-md group-hover:shadow-[0_0_15px_rgba(225,0,0,0.35)] shrink-0`}
+        className={`${iconDimensions} relative rounded-xl bg-gradient-to-br from-[#050B16] via-[#0B1320] to-[#1E293B] p-1.5 flex items-center justify-center transition-all duration-300 shadow-md shrink-0`}
       >
         <svg
           viewBox="0 0 100 100"
